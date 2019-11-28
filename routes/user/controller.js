@@ -2,7 +2,10 @@ let users = require("../../models/users");
 
 module.exports = {
   getUser: (req, res) => {
-    res.send(users);
+    res.status(200).json({
+      message: "registered users list",
+      users: users
+    });
   },
   register: (req, res) => {
     try {
